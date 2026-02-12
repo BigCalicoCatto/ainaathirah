@@ -43,7 +43,7 @@ export default function Portfolio() {
     }
   ];
 
-  const scrollToPackage = (index) => {
+  const scrollToPackage = (index: number) => {
     setActivePackage(index);
     if (carouselRef.current) {
       setTimeout(() => {
