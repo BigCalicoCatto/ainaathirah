@@ -57,7 +57,7 @@ export default function Portfolio() {
         top: 0,
         zIndex: 100
       }}>
-        <h1 style={{ fontSize: '18px', fontWeight: 'bold', margin: 0, color: '#000000' }}>Aina Athirah</h1>
+        <h1 style={{ fontSize: '18px', fontWeight: 'bold', margin: 0, color: '#4A6B5F' }}>Aina Athirah</h1>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           {/* Social Icons */}
@@ -81,7 +81,7 @@ export default function Portfolio() {
               border: 'none',
               fontSize: '20px',
               cursor: 'pointer',
-              color: '#000000',
+              color: '#4A6B5F',
               padding: 0
             }}
             aria-label="Toggle menu"
@@ -96,10 +96,10 @@ export default function Portfolio() {
         <nav style={{
           backgroundColor: '#FFFFFF',
           borderBottom: '1px solid #f0f0f0',
-          padding: '12px 16px',
+          padding: '16px 16px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '12px',
+          gap: '16px',
           position: 'sticky',
           top: '50px',
           zIndex: 99
@@ -119,7 +119,7 @@ export default function Portfolio() {
         backgroundImage: 'url(/ainahero.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
         height: '100vh',
         display: 'flex',
         alignItems: 'flex-start',
@@ -133,8 +133,8 @@ export default function Portfolio() {
             fontWeight: 'bold',
             margin: 0,
             lineHeight: '1.1',
-            color: '#000000',
-            textShadow: '2px 2px 4px rgba(255,255,255,0.3)'
+            color: '#FFFFFF',
+            textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
           }}>
             Passion<br/>
             Patience<br/>
@@ -143,9 +143,9 @@ export default function Portfolio() {
           <p style={{
             fontSize: '16px',
             marginTop: '16px',
-            color: '#000000',
+            color: '#FFFFFF',
             fontWeight: '500',
-            textShadow: '1px 1px 2px rgba(255,255,255,0.3)'
+            textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
           }}>
             One step at a time.<br/>
             To achieve excellence.
@@ -173,7 +173,7 @@ export default function Portfolio() {
 
       {/* ===== ABOUT ME ===== */}
       <section id="about" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -187,29 +187,25 @@ export default function Portfolio() {
         }}>Hello, I'm Aina Athirah!</h2>
 
         <div style={{
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
           gap: '24px',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          justifyContent: 'center'
+          alignItems: 'center'
         }}>
           {/* Image */}
           <img
             src="/ainaam.webp"
             alt="Aina Athirah"
             style={{
-              width: '200px',
-              height: '200px',
+              width: '100%',
+              height: 'auto',
               borderRadius: '8px',
-              objectFit: 'cover',
-              flexShrink: 0
+              objectFit: 'cover'
             }}
           />
 
           {/* Text */}
           <div style={{
-            flex: 1,
-            minWidth: '280px',
             textAlign: 'justify'
           }}>
             <p style={{
@@ -233,9 +229,17 @@ export default function Portfolio() {
         }}></div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== STATISTICS ===== */}
       <section style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -244,18 +248,17 @@ export default function Portfolio() {
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '24px'
+          gap: '16px'
         }}>
           {/* Stat 1 */}
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center', flex: 1 }}>
             <p style={{
               fontSize: '48px',
               fontWeight: 'bold',
               color: '#4A6B5F',
               margin: '0 0 8px 0'
             }}>200+</p>
-            <p style={{ fontSize: '14px', color: '#222222', margin: 0 }}>students</p>
+            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>students</p>
           </div>
 
           {/* Divider */}
@@ -266,14 +269,14 @@ export default function Portfolio() {
           }}></div>
 
           {/* Stat 2 */}
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center', flex: 1 }}>
             <p style={{
               fontSize: '48px',
               fontWeight: 'bold',
               color: '#4A6B5F',
               margin: '0 0 8px 0'
             }}>5</p>
-            <p style={{ fontSize: '14px', color: '#222222', margin: 0 }}>years of experience</p>
+            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>years of experience</p>
           </div>
 
           {/* Divider */}
@@ -284,21 +287,29 @@ export default function Portfolio() {
           }}></div>
 
           {/* Stat 3 */}
-          <div style={{ textAlign: 'center' }}>
+          <div style={{ textAlign: 'center', flex: 1 }}>
             <p style={{
               fontSize: '48px',
               fontWeight: 'bold',
               color: '#4A6B5F',
               margin: '0 0 8px 0'
             }}>1</p>
-            <p style={{ fontSize: '14px', color: '#222222', margin: 0 }}>goal = excellence</p>
+            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>goal = excellence</p>
           </div>
         </div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== MY APPROACH ===== */}
       <section id="approach" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -387,9 +398,17 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== IN MY CLASSROOM ===== */}
       <section id="classroom" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -478,9 +497,17 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== TESTIMONIALS ===== */}
       <section id="testimonials" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -535,9 +562,17 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== SUBJECTS & LEVELS ===== */}
       <section id="subjects" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -603,9 +638,17 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== PACKAGES CAROUSEL ===== */}
       <section id="packages" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -696,38 +739,41 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== CTA SECTION ===== */}
       <section id="contact" style={{
-        padding: '48px 24px',
+        padding: '32px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
         <div style={{
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
           gap: '24px',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          justifyContent: 'center'
+          alignItems: 'center'
         }}>
           {/* Image */}
           <img
             src="/ainacta.webp"
             alt="Teacher Aina"
             style={{
-              width: '200px',
-              height: '200px',
+              width: '100%',
+              height: 'auto',
               borderRadius: '8px',
-              objectFit: 'cover',
-              flexShrink: 0
+              objectFit: 'cover'
             }}
           />
 
           {/* Text & CTA */}
-          <div style={{
-            flex: 1,
-            minWidth: '280px'
-          }}>
+          <div>
             <h2 style={{
               fontSize: '24px',
               fontWeight: 'bold',
@@ -769,6 +815,14 @@ export default function Portfolio() {
           </div>
         </div>
       </section>
+
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
 
       {/* ===== FOOTER ===== */}
       <footer style={{
