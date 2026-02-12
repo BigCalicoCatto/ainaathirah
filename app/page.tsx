@@ -570,10 +570,15 @@ export default function Portfolio() {
 
       {/* ===== SUBJECTS & LEVELS ===== */}
       <section id="subjects" style={{
-        padding: '8px 24px',
+        padding: '8px 24px 24px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
-        margin: '0 auto'
+        margin: '0 auto',
+        backgroundImage: 'url(/ainateaches.webp)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'scroll'
       }}>
         <h2 style={{
           fontSize: '28px',
