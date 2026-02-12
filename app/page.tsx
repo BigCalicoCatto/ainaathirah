@@ -47,9 +47,11 @@ export default function Portfolio() {
     setActivePackage(index);
     if (carouselRef.current) {
       setTimeout(() => {
-        const items = carouselRef.current.querySelectorAll('[data-package-item]');
-        if (items[index]) {
-          items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        if (carouselRef.current) {
+          const items = carouselRef.current.querySelectorAll('[data-package-item]');
+          if (items[index]) {
+            items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+          }
         }
       }, 0);
     }
