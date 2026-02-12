@@ -183,7 +183,7 @@ export default function Portfolio() {
 
       {/* ===== ABOUT ME ===== */}
       <section id="about" style={{
-        padding: '16px 24px 24px 24px',
+        padding: '8px 24px 24px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -192,7 +192,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '16px',
+          marginBottom: '8px',
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
@@ -350,7 +350,7 @@ export default function Portfolio() {
 
       {/* ===== MY APPROACH ===== */}
       <section id="approach" style={{
-        padding: '24px 24px',
+        padding: '12px 24px',
         backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -470,7 +470,7 @@ export default function Portfolio() {
 
       {/* ===== IN MY CLASSROOM ===== */}
       <section id="classroom" style={{
-        padding: '24px 24px',
+        padding: '12px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -479,7 +479,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '24px',
+          marginBottom: '12px',
           textAlign: 'center'
         }}>In My Classroom</h2>
 
@@ -499,8 +499,14 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
-            }}>Learning by Doing</h3>
+              margin: '0 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <i className="fas fa-hand-fist" style={{ fontSize: '20px' }}></i>
+              Learning by Doing
+            </h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -522,8 +528,14 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
-            }}>Mistakes Are Welcome</h3>
+              margin: '0 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <i className="fas fa-heart" style={{ fontSize: '20px' }}></i>
+              Mistakes Are Welcome
+            </h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -545,8 +557,14 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
-            }}>Lessons That Connect to Life</h3>
+              margin: '0 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <i className="fas fa-globe" style={{ fontSize: '20px' }}></i>
+              Lessons That Connect to Life
+            </h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -569,7 +587,7 @@ export default function Portfolio() {
 
       {/* ===== TESTIMONIALS ===== */}
       <section id="testimonials" style={{
-        padding: '24px 24px',
+        padding: '12px 24px',
         backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -578,7 +596,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#FFFFFF',
-          marginBottom: '24px',
+          marginBottom: '12px',
           textAlign: 'center'
         }}>What Parents Are Saying</h2>
 
@@ -634,7 +652,7 @@ export default function Portfolio() {
 
       {/* ===== SUBJECTS & LEVELS ===== */}
       <section id="subjects" style={{
-        padding: '24px 24px',
+        padding: '12px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -643,7 +661,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '24px',
+          marginBottom: '12px',
           textAlign: 'center'
         }}>Teacher Aina teaches</h2>
 
@@ -719,7 +737,7 @@ export default function Portfolio() {
 
       {/* ===== PACKAGES CAROUSEL ===== */}
       <section id="packages" style={{
-        padding: '24px 24px',
+        padding: '12px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -728,18 +746,19 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '24px',
+          marginBottom: '12px',
           textAlign: 'center'
         }}>What I Offer</h2>
 
-        {/* Carousel Container */}
+        {/* Carousel Container - with scroll snap for proper dot navigation */}
         <div style={{
           display: 'flex',
           overflowX: 'auto',
           gap: '20px',
           paddingBottom: '20px',
           scrollBehavior: 'smooth',
-          WebkitOverflowScrolling: 'touch'
+          WebkitOverflowScrolling: 'touch',
+          scrollSnapType: 'x mandatory'
         }}>
           {packages.map((pkg, index) => (
             <div key={index} style={{
@@ -748,16 +767,17 @@ export default function Portfolio() {
               aspectRatio: '4 / 5',
               border: '2px solid #4A6B5F',
               borderRadius: '8px',
-              padding: '24px',
+              padding: '16px',
               backgroundColor: '#f9f9f9',
               display: 'flex',
-              flexDirection: 'column'
+              flexDirection: 'column',
+              scrollSnapAlign: 'start'
             }}>
               <h3 style={{
                 fontSize: '18px',
                 fontWeight: 'bold',
                 color: '#4A6B5F',
-                margin: '0 0 16px 0',
+                margin: '0 0 12px 0',
                 textAlign: 'center'
               }}>
                 {pkg.title}
@@ -775,8 +795,8 @@ export default function Portfolio() {
                   <li key={i} style={{
                     fontSize: '13px',
                     color: '#222222',
-                    marginBottom: '8px',
-                    lineHeight: '1.4'
+                    marginBottom: '6px',
+                    lineHeight: '1.3'
                   }}>
                     {detail}
                   </li>
@@ -786,7 +806,7 @@ export default function Portfolio() {
                 fontSize: '16px',
                 fontWeight: 'bold',
                 color: '#4A6B5F',
-                margin: '16px 0 0 0',
+                margin: '12px 0 0 0',
                 textAlign: 'center'
               }}>
                 {pkg.price}
@@ -800,7 +820,7 @@ export default function Portfolio() {
           display: 'flex',
           justifyContent: 'center',
           gap: '8px',
-          marginTop: '16px'
+          marginTop: '12px'
         }}>
           {packages.map((_, index) => (
             <button
@@ -831,7 +851,7 @@ export default function Portfolio() {
 
       {/* ===== CTA SECTION ===== */}
       <section id="contact" style={{
-        padding: '24px 24px',
+        padding: '12px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -840,17 +860,17 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '24px',
+          marginBottom: '16px',
           textAlign: 'center'
         }}>
           Ready to Start?
         </h2>
 
         <div style={{
-          display: 'flex',
-          flexDirection: 'column',
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
           gap: '24px',
-          alignItems: 'flex-start'
+          alignItems: 'start'
         }}>
           {/* Image */}
           <img
@@ -858,7 +878,6 @@ export default function Portfolio() {
             alt="Teacher Aina"
             style={{
               width: '100%',
-              maxWidth: '200px',
               height: 'auto',
               borderRadius: '8px',
               objectFit: 'cover'
@@ -866,7 +885,11 @@ export default function Portfolio() {
           />
 
           {/* Text & CTA */}
-          <div>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'flex-start'
+          }}>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -886,7 +909,8 @@ export default function Portfolio() {
               textDecoration: 'none',
               fontWeight: 'bold',
               fontSize: '16px',
-              whiteSpace: 'nowrap'
+              whiteSpace: 'nowrap',
+              width: 'fit-content'
             }}>
               <i className="fab fa-whatsapp"></i>
               WhatsApp
