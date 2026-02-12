@@ -1,8 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
-import { Menu, X, Instagram, Music2, MessageCircle } from 'lucide-react';
 
 const colors = {
   white: '#FFFFFF',
@@ -31,20 +29,40 @@ export default function Portfolio() {
         <div style={{ display: 'flex', gap: '16px', alignItems: 'center' }}>
           {/* Social Icons */}
           <div style={{ display: 'flex', gap: '12px' }}>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen, fontSize: '20px', cursor: 'pointer' }}>
-              <Instagram size={20} />
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen, cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+              </svg>
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen, fontSize: '20px', cursor: 'pointer' }}>
-              <Music2 size={20} />
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen, cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+              </svg>
             </a>
-            <a href="https://wa.me" target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen, fontSize: '20px', cursor: 'pointer' }}>
-              <MessageCircle size={20} />
+            <a href="https://wa.me" target="_blank" rel="noopener noreferrer" style={{ color: colors.sageGreen, cursor: 'pointer', display: 'flex', alignItems: 'center' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 12 16 16 12"></polyline>
+              </svg>
             </a>
           </div>
 
           {/* Hamburger Menu */}
-          <button onClick={() => setMenuOpen(!menuOpen)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: colors.black, fontSize: '24px' }}>
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          <button onClick={() => setMenuOpen(!menuOpen)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: colors.black, fontSize: '24px', padding: 0 }}>
+            {menuOpen ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            )}
           </button>
         </div>
       </header>
@@ -84,12 +102,10 @@ export default function Portfolio() {
 
       {/* HERO SECTION */}
       <section id="hero" style={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden' }}>
-        <Image
+        <img
           src="/ainahero.webp"
           alt="Hero"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
         />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0, 0, 0, 0.4)' }} />
         <div style={{ position: 'absolute', top: '50%', left: '16px', transform: 'translateY(-50%)', color: colors.white }}>
@@ -108,11 +124,10 @@ export default function Portfolio() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center' }}>
           {/* Picture */}
           <div style={{ width: '100%', height: '280px', position: 'relative', borderRadius: '12px', overflow: 'hidden' }}>
-            <Image
+            <img
               src="/ainaam.webp"
               alt="Aina Athirah"
-              fill
-              style={{ objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           </div>
 
@@ -241,11 +256,10 @@ export default function Portfolio() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center' }}>
           {/* Picture */}
           <div style={{ width: '100%', height: '280px', position: 'relative', borderRadius: '12px', overflow: 'hidden' }}>
-            <Image
+            <img
               src="/ainacta.webp"
               alt="Aina CTA"
-              fill
-              style={{ objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
           </div>
 
