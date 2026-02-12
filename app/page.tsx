@@ -5,7 +5,7 @@ import { useState, useRef } from 'react';
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activePackage, setActivePackage] = useState(0);
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   const packages = [
     {
