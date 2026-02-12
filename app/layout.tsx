@@ -125,7 +125,7 @@ export default function Portfolio() {
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
-        padding: '60px 24px',
+        padding: '60px 24px 0 24px',
         position: 'relative'
       }}>
         <div>
@@ -178,12 +178,12 @@ export default function Portfolio() {
         height: '1px',
         backgroundColor: '#4A6B5F',
         width: '60%',
-        margin: '0 auto'
+        margin: '20px auto'
       }}></div>
 
       {/* ===== ABOUT ME ===== */}
       <section id="about" style={{
-        padding: '32px 24px',
+        padding: '16px 24px 24px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -192,7 +192,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '24px',
+          marginBottom: '16px',
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
@@ -265,7 +265,7 @@ export default function Portfolio() {
           height: '2px',
           backgroundColor: '#4A6B5F',
           width: '60%',
-          margin: '32px auto 0',
+          margin: '20px auto 0',
           borderRadius: '2px'
         }}></div>
       </section>
@@ -280,7 +280,7 @@ export default function Portfolio() {
 
       {/* ===== STATISTICS ===== */}
       <section style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -350,7 +350,7 @@ export default function Portfolio() {
 
       {/* ===== MY APPROACH ===== */}
       <section id="approach" style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -359,7 +359,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#FFFFFF',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>My Approach</h2>
 
@@ -380,8 +380,14 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
-            }}>All Subjects Welcome</h3>
+              margin: '0 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <i className="fas fa-book" style={{ fontSize: '20px' }}></i>
+              All Subjects Welcome
+            </h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -404,8 +410,14 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
-            }}>Every Level Matters</h3>
+              margin: '0 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <i className="fas fa-graduation-cap" style={{ fontSize: '20px' }}></i>
+              Every Level Matters
+            </h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -428,8 +440,14 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
-            }}>Real Understanding Over Rote Learning</h3>
+              margin: '0 0 12px 0',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <i className="fas fa-lightbulb" style={{ fontSize: '20px' }}></i>
+              Real Understanding Over Rote Learning
+            </h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
@@ -452,7 +470,7 @@ export default function Portfolio() {
 
       {/* ===== IN MY CLASSROOM ===== */}
       <section id="classroom" style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -461,7 +479,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>In My Classroom</h2>
 
@@ -551,7 +569,7 @@ export default function Portfolio() {
 
       {/* ===== TESTIMONIALS ===== */}
       <section id="testimonials" style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -560,7 +578,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#FFFFFF',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>What Parents Are Saying</h2>
 
@@ -616,7 +634,7 @@ export default function Portfolio() {
 
       {/* ===== SUBJECTS & LEVELS ===== */}
       <section id="subjects" style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -625,7 +643,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>Teacher Aina teaches</h2>
 
@@ -701,7 +719,7 @@ export default function Portfolio() {
 
       {/* ===== PACKAGES CAROUSEL ===== */}
       <section id="packages" style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -710,7 +728,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>What I Offer</h2>
 
@@ -721,11 +739,12 @@ export default function Portfolio() {
           gap: '20px',
           paddingBottom: '20px',
           scrollBehavior: 'smooth',
-          justifyContent: 'center'
+          WebkitOverflowScrolling: 'touch'
         }}>
           {packages.map((pkg, index) => (
             <div key={index} style={{
-              flex: '0 0 280px',
+              flex: '0 0 calc(100% - 32px)',
+              maxWidth: '280px',
               aspectRatio: '4 / 5',
               border: '2px solid #4A6B5F',
               borderRadius: '8px',
@@ -812,7 +831,7 @@ export default function Portfolio() {
 
       {/* ===== CTA SECTION ===== */}
       <section id="contact" style={{
-        padding: '32px 24px',
+        padding: '24px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -821,25 +840,26 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>
           Ready to Start?
         </h2>
 
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: '200px 1fr',
+          display: 'flex',
+          flexDirection: 'column',
           gap: '24px',
-          alignItems: 'start'
+          alignItems: 'flex-start'
         }}>
           {/* Image */}
           <img
             src="/ainacta.webp"
             alt="Teacher Aina"
             style={{
-              width: '200px',
-              height: '200px',
+              width: '100%',
+              maxWidth: '200px',
+              height: 'auto',
               borderRadius: '8px',
               objectFit: 'cover'
             }}
@@ -865,7 +885,8 @@ export default function Portfolio() {
               borderRadius: '6px',
               textDecoration: 'none',
               fontWeight: 'bold',
-              fontSize: '16px'
+              fontSize: '16px',
+              whiteSpace: 'nowrap'
             }}>
               <i className="fab fa-whatsapp"></i>
               WhatsApp
