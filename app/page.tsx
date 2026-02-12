@@ -427,6 +427,34 @@ export default function Portfolio() {
         margin: 0
       }}></div>
 
+      {/* ===== AINA TEACHES IMAGE ===== */}
+      <section style={{
+        padding: '0',
+        backgroundColor: '#FFFFFF',
+        maxWidth: '1200px',
+        margin: '0 auto',
+        aspectRatio: '705 / 825'
+      }}>
+        <img
+          src="/ainateaches.webp"
+          alt="Teacher Aina"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: 'block'
+          }}
+        />
+      </section>
+
+      {/* Divider */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '100%',
+        margin: 0
+      }}></div>
+
       {/* ===== IN MY CLASSROOM ===== */}
       <section id="classroom" style={{
         padding: '8px 24px',
@@ -570,15 +598,10 @@ export default function Portfolio() {
 
       {/* ===== SUBJECTS & LEVELS ===== */}
       <section id="subjects" style={{
-        padding: '8px 24px 24px 24px',
+        padding: '8px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
-        margin: '0 auto',
-        backgroundImage: 'url(/ainateaches.webp)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: 'scroll'
+        margin: '0 auto'
       }}>
         <h2 style={{
           fontSize: '28px',
