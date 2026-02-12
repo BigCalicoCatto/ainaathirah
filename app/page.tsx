@@ -208,7 +208,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '8px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
@@ -352,7 +352,7 @@ export default function Portfolio() {
 
       {/* ===== MY APPROACH ===== */}
       <section id="approach" style={{
-        padding: '12px 24px',
+        padding: '8px 24px',
         backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -361,7 +361,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#FFFFFF',
-          marginBottom: '12px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>My Approach</h2>
 
@@ -429,7 +429,7 @@ export default function Portfolio() {
 
       {/* ===== IN MY CLASSROOM ===== */}
       <section id="classroom" style={{
-        padding: '12px 24px',
+        padding: '8px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -438,7 +438,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '12px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>In My Classroom</h2>
 
@@ -505,7 +505,7 @@ export default function Portfolio() {
 
       {/* ===== TESTIMONIALS ===== */}
       <section id="testimonials" style={{
-        padding: '12px 24px',
+        padding: '8px 24px',
         backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -514,7 +514,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#FFFFFF',
-          marginBottom: '12px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>What Parents Are Saying</h2>
 
@@ -570,7 +570,7 @@ export default function Portfolio() {
 
       {/* ===== SUBJECTS & LEVELS ===== */}
       <section id="subjects" style={{
-        padding: '12px 24px',
+        padding: '8px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -579,7 +579,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '12px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>Teacher Aina teaches</h2>
 
@@ -653,7 +653,7 @@ export default function Portfolio() {
 
       {/* ===== PACKAGES CAROUSEL ===== */}
       <section id="packages" style={{
-        padding: '12px 24px',
+        padding: '8px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -662,7 +662,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '12px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>What I Offer</h2>
 
@@ -772,7 +772,7 @@ export default function Portfolio() {
 
       {/* ===== CTA SECTION ===== */}
       <section id="contact" style={{
-        padding: '12px 24px',
+        padding: '8px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -781,7 +781,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '16px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>
           Ready to Start?
