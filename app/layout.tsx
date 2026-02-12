@@ -52,7 +52,7 @@ export default function Portfolio() {
         alignItems: 'center',
         padding: '12px 16px',
         backgroundColor: '#FFFFFF',
-        borderBottom: '1px solid #f0f0f0',
+        borderBottom: '2px solid #4A6B5F',
         position: 'sticky',
         top: 0,
         zIndex: 100
@@ -104,13 +104,13 @@ export default function Portfolio() {
           top: '50px',
           zIndex: 99
         }}>
-          <a href="#about" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>About me</a>
-          <a href="#approach" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>My Approach</a>
-          <a href="#classroom" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>My Classroom</a>
-          <a href="#testimonials" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Testimonials</a>
-          <a href="#subjects" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Subjects & Levels</a>
-          <a href="#packages" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Packages</a>
-          <a href="#contact" style={{ color: '#000000', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Contact Me</a>
+          <a href="#about" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>About me</a>
+          <a href="#approach" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>My Approach</a>
+          <a href="#classroom" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>My Classroom</a>
+          <a href="#testimonials" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Testimonials</a>
+          <a href="#subjects" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Subjects & Levels</a>
+          <a href="#packages" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Packages</a>
+          <a href="#contact" style={{ color: '#4A6B5F', textDecoration: 'none', fontSize: '14px' }} onClick={() => setMenuOpen(false)}>Contact Me</a>
         </nav>
       )}
 
@@ -157,8 +157,7 @@ export default function Portfolio() {
         {/* Floating Down Arrow */}
         <div style={{
           position: 'absolute',
-          bottom: 'auto',
-          top: '280px',
+          bottom: '60px',
           left: '50%',
           transform: 'translateX(-50%)',
           animation: 'bounce 2s infinite'
@@ -173,6 +172,14 @@ export default function Portfolio() {
           }
         `}</style>
       </section>
+
+      {/* Premium divider line */}
+      <div style={{
+        height: '1px',
+        backgroundColor: '#4A6B5F',
+        width: '60%',
+        margin: '0 auto'
+      }}></div>
 
       {/* ===== ABOUT ME ===== */}
       <section id="about" style={{
@@ -189,55 +196,38 @@ export default function Portfolio() {
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
-        {/* Part 1 - Above image */}
-        <div style={{ marginBottom: '24px' }}>
-          <p style={{
-            fontSize: '16px',
-            lineHeight: '1.8',
-            margin: 0,
-            color: '#222222',
-            textAlign: 'justify'
-          }}>
-            I used to design systems as an engineer. Now I help young minds build their own.
-          </p>
-        </div>
+        {/* Part 1 - Opening statement */}
+        <p style={{
+          fontSize: '16px',
+          lineHeight: '1.8',
+          margin: '0 0 20px 0',
+          color: '#222222',
+          textAlign: 'justify'
+        }}>
+          I used to design systems as an engineer. Now I help young minds build their own.
+        </p>
 
-        {/* Part 2 - Image + text side by side */}
+        {/* Part 2 - Image + text */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '24px',
+          gridTemplateColumns: '200px 1fr',
+          gap: '20px',
           alignItems: 'start',
-          marginBottom: '24px'
+          marginBottom: '20px'
         }}>
           {/* Image */}
           <img
             src="/ainaam.webp"
             alt="Aina Athirah"
             style={{
-              width: '100%',
-              height: 'auto',
+              width: '200px',
+              height: '200px',
               borderRadius: '8px',
               objectFit: 'cover'
             }}
           />
 
-          {/* Text - Part 2 */}
-          <div>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              margin: 0,
-              color: '#222222',
-              textAlign: 'justify'
-            }}>
-              After years in engineering, I realized my real passion was teaching. For the past 5 years, I've been teaching STEM subjects to students of all levels.
-            </p>
-          </div>
-        </div>
-
-        {/* Part 3 - Below image */}
-        <div style={{ marginBottom: '24px' }}>
+          {/* Text */}
           <p style={{
             fontSize: '16px',
             lineHeight: '1.8',
@@ -245,9 +235,20 @@ export default function Portfolio() {
             color: '#222222',
             textAlign: 'justify'
           }}>
-            My main focus is to build confidence. Because understanding today builds courage for tomorrow.
+            After years in engineering, I realized my real passion was teaching. For the past 5 years, I've been teaching STEM subjects to students of all levels.
           </p>
         </div>
+
+        {/* Part 3 - Closing statement */}
+        <p style={{
+          fontSize: '16px',
+          lineHeight: '1.8',
+          margin: 0,
+          color: '#222222',
+          textAlign: 'justify'
+        }}>
+          My main focus is to build confidence. Because understanding today builds courage for tomorrow.
+        </p>
 
         {/* Green accent line */}
         <div style={{
