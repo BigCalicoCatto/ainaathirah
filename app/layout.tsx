@@ -196,7 +196,17 @@ export default function Portfolio() {
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
-        {/* Part 1 - Opening statement */}
+        {/* Part 1 & 2 - Above image */}
+        <p style={{
+          fontSize: '16px',
+          lineHeight: '1.8',
+          margin: '0 0 12px 0',
+          color: '#222222',
+          textAlign: 'justify'
+        }}>
+          I used to design systems as an engineer. Now I help young minds build their own.
+        </p>
+
         <p style={{
           fontSize: '16px',
           lineHeight: '1.8',
@@ -204,10 +214,10 @@ export default function Portfolio() {
           color: '#222222',
           textAlign: 'justify'
         }}>
-          I used to design systems as an engineer. Now I help young minds build their own.
+          After years in engineering, I realized my real passion was teaching.
         </p>
 
-        {/* Part 2 - Image + text */}
+        {/* Part 3 - Image + text side by side */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '200px 1fr',
@@ -235,11 +245,11 @@ export default function Portfolio() {
             color: '#222222',
             textAlign: 'justify'
           }}>
-            After years in engineering, I realized my real passion was teaching. For the past 5 years, I've been teaching STEM subjects to students of all levels.
+            For the past 5 years, I've been teaching STEM subjects to students of all levels.
           </p>
         </div>
 
-        {/* Part 3 - Closing statement */}
+        {/* Part 4 - Below image */}
         <p style={{
           fontSize: '16px',
           lineHeight: '1.8',
@@ -289,7 +299,7 @@ export default function Portfolio() {
               color: '#4A6B5F',
               margin: '0 0 8px 0'
             }}>200+</p>
-            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>students</p>
+            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>STUDENTS</p>
           </div>
 
           {/* Divider */}
@@ -307,7 +317,7 @@ export default function Portfolio() {
               color: '#4A6B5F',
               margin: '0 0 8px 0'
             }}>5</p>
-            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>years of experience</p>
+            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>YEARS OF EXPERIENCE</p>
           </div>
 
           {/* Divider */}
@@ -325,7 +335,7 @@ export default function Portfolio() {
               color: '#4A6B5F',
               margin: '0 0 8px 0'
             }}>1</p>
-            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>goal = excellence</p>
+            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>GOAL = EXCELLENCE</p>
           </div>
         </div>
       </section>
@@ -341,14 +351,14 @@ export default function Portfolio() {
       {/* ===== MY APPROACH ===== */}
       <section id="approach" style={{
         padding: '32px 24px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
         <h2 style={{
           fontSize: '28px',
           fontWeight: 'bold',
-          color: '#4A6B5F',
+          color: '#FFFFFF',
           marginBottom: '32px',
           textAlign: 'center'
         }}>My Approach</h2>
@@ -360,10 +370,11 @@ export default function Portfolio() {
         }}>
           {/* Card 1 */}
           <div style={{
-            border: '2px solid #4A6B5F',
+            border: '8px solid #FFFFFF',
             borderRadius: '8px',
             padding: '24px',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#FFFFFF',
+            boxShadow: 'inset 0 0 0 2px #4A6B5F'
           }}>
             <h3 style={{
               fontSize: '18px',
@@ -383,10 +394,11 @@ export default function Portfolio() {
 
           {/* Card 2 */}
           <div style={{
-            border: '2px solid #4A6B5F',
+            border: '8px solid #FFFFFF',
             borderRadius: '8px',
             padding: '24px',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#FFFFFF',
+            boxShadow: 'inset 0 0 0 2px #4A6B5F'
           }}>
             <h3 style={{
               fontSize: '18px',
@@ -406,10 +418,11 @@ export default function Portfolio() {
 
           {/* Card 3 */}
           <div style={{
-            border: '2px solid #4A6B5F',
+            border: '8px solid #FFFFFF',
             borderRadius: '8px',
             padding: '24px',
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#FFFFFF',
+            boxShadow: 'inset 0 0 0 2px #4A6B5F'
           }}>
             <h3 style={{
               fontSize: '18px',
@@ -539,14 +552,14 @@ export default function Portfolio() {
       {/* ===== TESTIMONIALS ===== */}
       <section id="testimonials" style={{
         padding: '32px 24px',
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#4A6B5F',
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
         <h2 style={{
           fontSize: '28px',
           fontWeight: 'bold',
-          color: '#4A6B5F',
+          color: '#FFFFFF',
           marginBottom: '32px',
           textAlign: 'center'
         }}>What Parents Are Saying</h2>
@@ -558,11 +571,11 @@ export default function Portfolio() {
         }}>
           {testimonials.map((testimonial, index) => (
             <div key={index} style={{
-              backgroundColor: '#f9f9f9',
-              border: '1px solid #e0e0e0',
-              borderLeft: '4px solid #4A6B5F',
-              borderRadius: '4px',
-              padding: '16px',
+              border: '8px solid #FFFFFF',
+              borderRadius: '8px',
+              padding: '20px',
+              backgroundColor: '#FFFFFF',
+              boxShadow: 'inset 0 0 0 2px #4A6B5F'
             }}>
               <p style={{
                 fontSize: '14px',
@@ -583,7 +596,7 @@ export default function Portfolio() {
               </p>
               <p style={{
                 fontSize: '12px',
-                color: '#666666',
+                color: '#4A6B5F',
                 margin: 0
               }}>
                 {testimonial.location}
@@ -632,15 +645,19 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
+              margin: '0 0 12px 0',
+              textAlign: 'center'
             }}>Subjects</h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
               color: '#222222',
-              margin: 0
+              margin: 0,
+              textAlign: 'center'
             }}>
-              Malay • English • Mathematics • Science • Additional Mathematics • Physics • Chemistry • Biology
+              Malay • English • Mathematics<br/>
+              • Science • Additional Mathematics<br/>
+              • Physics • Chemistry • Biology
             </p>
           </div>
 
@@ -655,15 +672,20 @@ export default function Portfolio() {
               fontSize: '18px',
               fontWeight: 'bold',
               color: '#4A6B5F',
-              margin: '0 0 12px 0'
+              margin: '0 0 12px 0',
+              textAlign: 'center'
             }}>Levels</h3>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
               color: '#222222',
-              margin: 0
+              margin: 0,
+              textAlign: 'center'
             }}>
-              Primary School • Secondary School (Form 1–5) • SPM • STPM • Matriculation • Diploma • Polytechnic • International Baccalaureate (IB)
+              Primary School • Secondary School<br/>
+              • SPM • STPM • Matriculation<br/>
+              • Diploma • Polytechnic<br/>
+              • International Baccalaureate (IB)
             </p>
           </div>
         </div>
@@ -698,35 +720,44 @@ export default function Portfolio() {
           overflowX: 'auto',
           gap: '20px',
           paddingBottom: '20px',
-          scrollBehavior: 'smooth'
+          scrollBehavior: 'smooth',
+          justifyContent: 'center'
         }}>
           {packages.map((pkg, index) => (
             <div key={index} style={{
-              flex: '0 0 calc(100% - 20px)',
-              minWidth: '280px',
+              flex: '0 0 280px',
+              aspectRatio: '4 / 5',
               border: '2px solid #4A6B5F',
               borderRadius: '8px',
               padding: '24px',
-              backgroundColor: '#f9f9f9'
+              backgroundColor: '#f9f9f9',
+              display: 'flex',
+              flexDirection: 'column'
             }}>
               <h3 style={{
                 fontSize: '18px',
                 fontWeight: 'bold',
                 color: '#4A6B5F',
-                margin: '0 0 12px 0'
+                margin: '0 0 16px 0',
+                textAlign: 'center'
               }}>
                 {pkg.title}
               </h3>
               <ul style={{
                 listStyle: 'none',
                 padding: 0,
-                margin: '0 0 16px 0'
+                margin: '0 0 auto 0',
+                flex: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'flex-start'
               }}>
                 {pkg.details.map((detail, i) => (
                   <li key={i} style={{
-                    fontSize: '14px',
+                    fontSize: '13px',
                     color: '#222222',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    lineHeight: '1.4'
                   }}>
                     {detail}
                   </li>
@@ -736,7 +767,8 @@ export default function Portfolio() {
                 fontSize: '16px',
                 fontWeight: 'bold',
                 color: '#4A6B5F',
-                margin: 0
+                margin: '16px 0 0 0',
+                textAlign: 'center'
               }}>
                 {pkg.price}
               </p>
@@ -785,19 +817,29 @@ export default function Portfolio() {
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
+        <h2 style={{
+          fontSize: '28px',
+          fontWeight: 'bold',
+          color: '#4A6B5F',
+          marginBottom: '32px',
+          textAlign: 'center'
+        }}>
+          Ready to Start?
+        </h2>
+
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
+          gridTemplateColumns: '200px 1fr',
           gap: '24px',
-          alignItems: 'center'
+          alignItems: 'start'
         }}>
           {/* Image */}
           <img
             src="/ainacta.webp"
             alt="Teacher Aina"
             style={{
-              width: '100%',
-              height: 'auto',
+              width: '200px',
+              height: '200px',
               borderRadius: '8px',
               objectFit: 'cover'
             }}
@@ -805,28 +847,13 @@ export default function Portfolio() {
 
           {/* Text & CTA */}
           <div>
-            <h2 style={{
-              fontSize: '24px',
-              fontWeight: 'bold',
-              color: '#000000',
-              margin: '0 0 16px 0'
-            }}>
-              Ready to Start?
-            </h2>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
               color: '#222222',
-              margin: '0 0 16px 0'
-            }}>
-              Book a free 30-minute consultation with Teacher Aina. We'll talk about your child's needs, goals, and how we can help them thrive.
-            </p>
-            <p style={{
-              fontSize: '14px',
-              color: '#666666',
               margin: '0 0 20px 0'
             }}>
-              No pressure. Just a honest conversation.
+              Book a free 30-minute consultation with Teacher Aina.
             </p>
             <a href="https://wa.me/" style={{
               display: 'inline-flex',
@@ -841,7 +868,7 @@ export default function Portfolio() {
               fontSize: '16px'
             }}>
               <i className="fab fa-whatsapp"></i>
-              WhatsApp us now
+              WhatsApp
             </a>
           </div>
         </div>
@@ -858,7 +885,7 @@ export default function Portfolio() {
       {/* ===== FOOTER ===== */}
       <footer style={{
         padding: '24px',
-        backgroundColor: '#000000',
+        backgroundColor: '#4A6B5F',
         color: '#FFFFFF',
         textAlign: 'center',
         fontSize: '14px'
