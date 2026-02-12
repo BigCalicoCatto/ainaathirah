@@ -120,7 +120,8 @@ export default function Portfolio() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '100vh',
+        backgroundAttachment: 'scroll',
+        aspectRatio: '4 / 5',
         display: 'flex',
         alignItems: 'flex-start',
         justifyContent: 'flex-start',
@@ -143,6 +144,7 @@ export default function Portfolio() {
           <p style={{
             fontSize: '16px',
             marginTop: '16px',
+            marginBottom: '24px',
             color: '#FFFFFF',
             fontWeight: '500',
             textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
@@ -155,7 +157,8 @@ export default function Portfolio() {
         {/* Floating Down Arrow */}
         <div style={{
           position: 'absolute',
-          bottom: '30px',
+          bottom: 'auto',
+          top: '280px',
           left: '50%',
           transform: 'translateX(-50%)',
           animation: 'bounce 2s infinite'
@@ -182,15 +185,30 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#4A6B5F',
-          marginBottom: '32px',
+          marginBottom: '24px',
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
+        {/* Part 1 - Above image */}
+        <div style={{ marginBottom: '24px' }}>
+          <p style={{
+            fontSize: '16px',
+            lineHeight: '1.8',
+            margin: 0,
+            color: '#222222',
+            textAlign: 'justify'
+          }}>
+            I used to design systems as an engineer. Now I help young minds build their own.
+          </p>
+        </div>
+
+        {/* Part 2 - Image + text side by side */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           gap: '24px',
-          alignItems: 'center'
+          alignItems: 'start',
+          marginBottom: '24px'
         }}>
           {/* Image */}
           <img
@@ -204,19 +222,31 @@ export default function Portfolio() {
             }}
           />
 
-          {/* Text */}
-          <div style={{
-            textAlign: 'justify'
-          }}>
+          {/* Text - Part 2 */}
+          <div>
             <p style={{
               fontSize: '16px',
               lineHeight: '1.8',
               margin: 0,
-              color: '#222222'
+              color: '#222222',
+              textAlign: 'justify'
             }}>
-              I used to design systems as an engineer. Now I help young minds build their own. After years in engineering, I realized my real passion was teaching. For the past 5 years, I've been teaching STEM subjects to students of all levels. My main focus is to build confidence. Because understanding today builds courage for tomorrow.
+              After years in engineering, I realized my real passion was teaching. For the past 5 years, I've been teaching STEM subjects to students of all levels.
             </p>
           </div>
+        </div>
+
+        {/* Part 3 - Below image */}
+        <div style={{ marginBottom: '24px' }}>
+          <p style={{
+            fontSize: '16px',
+            lineHeight: '1.8',
+            margin: 0,
+            color: '#222222',
+            textAlign: 'justify'
+          }}>
+            My main focus is to build confidence. Because understanding today builds courage for tomorrow.
+          </p>
         </div>
 
         {/* Green accent line */}
@@ -247,7 +277,7 @@ export default function Portfolio() {
         <div style={{
           display: 'flex',
           justifyContent: 'space-around',
-          alignItems: 'center',
+          alignItems: 'flex-start',
           gap: '16px'
         }}>
           {/* Stat 1 */}
