@@ -199,7 +199,7 @@ export default function Portfolio() {
 
       {/* ===== ABOUT ME ===== */}
       <section id="about" style={{
-        padding: '8px 24px 24px 24px',
+        padding: '4px 24px 24px 24px',
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto'
@@ -433,7 +433,11 @@ export default function Portfolio() {
         backgroundColor: '#FFFFFF',
         maxWidth: '1200px',
         margin: '0 auto',
-        aspectRatio: '705 / 825'
+        aspectRatio: '705 / 825',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center'
       }}>
         <img
           src="/ainateaches.webp"
@@ -442,9 +446,31 @@ export default function Portfolio() {
             width: '100%',
             height: '100%',
             objectFit: 'cover',
-            display: 'block'
+            display: 'block',
+            position: 'absolute',
+            top: 0,
+            left: 0
           }}
         />
+        <div style={{
+          position: 'relative',
+          zIndex: 10,
+          textAlign: 'center',
+          paddingBottom: '40px',
+          paddingLeft: '20px',
+          paddingRight: '20px'
+        }}>
+          <h3 style={{
+            fontSize: '32px',
+            fontWeight: 'bold',
+            color: '#FFFFFF',
+            margin: 0,
+            textShadow: '2px 2px 8px rgba(0,0,0,0.4)',
+            lineHeight: '1.3'
+          }}>
+            Passion &<br />Compassion
+          </h3>
+        </div>
       </section>
 
       {/* Divider */}
