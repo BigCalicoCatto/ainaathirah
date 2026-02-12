@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeCarouselIndex, setActiveCarouselIndex] = useState(0);
+  const [activePackage, setActivePackage] = useState(0);
+  const carouselRef = useRef(null);
 
   const packages = [
     {
@@ -42,10 +43,30 @@ export default function Portfolio() {
     }
   ];
 
+  const scrollToPackage = (index) => {
+    setActivePackage(index);
+    if (carouselRef.current) {
+      setTimeout(() => {
+        const items = carouselRef.current.querySelectorAll('[data-package-item]');
+        if (items[index]) {
+          items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        }
+      }, 0);
+    }
+  };
+
   return (
     <div style={{ fontFamily: 'system-ui, -apple-system, sans-serif', backgroundColor: '#FFFFFF', color: '#222222' }}>
-      
-      {/* ===== BANNER ===== */}
+      <style>{`
+        @keyframes bounce {
+          0%, 100% { transform: translateX(-50%) translateY(0); }
+          50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        .carousel-container::-webkit-scrollbar { display: none; }
+        .carousel-container { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
+
+      {/* ===== HEADER ===== */}
       <header style={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -91,7 +112,7 @@ export default function Portfolio() {
         </div>
       </header>
 
-      {/* Dropdown Menu */}
+      {/* ===== MENU ===== */}
       {menuOpen && (
         <nav style={{
           backgroundColor: '#FFFFFF',
@@ -164,16 +185,9 @@ export default function Portfolio() {
         }}>
           <i className="fas fa-chevron-down" style={{ fontSize: '24px', color: '#4A6B5F' }}></i>
         </div>
-
-        <style>{`
-          @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(-10px); }
-          }
-        `}</style>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -196,7 +210,6 @@ export default function Portfolio() {
           textAlign: 'center'
         }}>Hello, I'm Aina Athirah!</h2>
 
-        {/* Part 1 & 2 - Above image */}
         <p style={{
           fontSize: '16px',
           lineHeight: '1.8',
@@ -217,7 +230,6 @@ export default function Portfolio() {
           After years in engineering, I realized my real passion was teaching.
         </p>
 
-        {/* Part 3 - Image + text side by side */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '200px 1fr',
@@ -225,7 +237,6 @@ export default function Portfolio() {
           alignItems: 'start',
           marginBottom: '20px'
         }}>
-          {/* Image */}
           <img
             src="/ainaam.webp"
             alt="Aina Athirah"
@@ -237,7 +248,6 @@ export default function Portfolio() {
             }}
           />
 
-          {/* Text */}
           <p style={{
             fontSize: '16px',
             lineHeight: '1.8',
@@ -249,7 +259,6 @@ export default function Portfolio() {
           </p>
         </div>
 
-        {/* Part 4 - Below image */}
         <p style={{
           fontSize: '16px',
           lineHeight: '1.8',
@@ -260,7 +269,6 @@ export default function Portfolio() {
           My main focus is to build confidence. Because understanding today builds courage for tomorrow.
         </p>
 
-        {/* Green accent line */}
         <div style={{
           height: '2px',
           backgroundColor: '#4A6B5F',
@@ -270,7 +278,7 @@ export default function Portfolio() {
         }}></div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -283,64 +291,56 @@ export default function Portfolio() {
         padding: '24px 24px',
         backgroundColor: '#f9f9f9',
         maxWidth: '1200px',
-        margin: '0 auto'
+        margin: '0 auto',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'flex-start',
+        gap: '16px'
       }}>
+        <div style={{ textAlign: 'center', flex: 1 }}>
+          <p style={{
+            fontSize: '48px',
+            fontWeight: 'bold',
+            color: '#4A6B5F',
+            margin: '0 0 8px 0'
+          }}>200+</p>
+          <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>STUDENTS</p>
+        </div>
+
         <div style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          alignItems: 'flex-start',
-          gap: '16px'
-        }}>
-          {/* Stat 1 */}
-          <div style={{ textAlign: 'center', flex: 1 }}>
-            <p style={{
-              fontSize: '48px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 8px 0'
-            }}>200+</p>
-            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>STUDENTS</p>
-          </div>
+          width: '2px',
+          height: '60px',
+          backgroundColor: '#4A6B5F'
+        }}></div>
 
-          {/* Divider */}
-          <div style={{
-            width: '2px',
-            height: '60px',
-            backgroundColor: '#4A6B5F'
-          }}></div>
+        <div style={{ textAlign: 'center', flex: 1 }}>
+          <p style={{
+            fontSize: '48px',
+            fontWeight: 'bold',
+            color: '#4A6B5F',
+            margin: '0 0 8px 0'
+          }}>5</p>
+          <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>YEARS OF EXPERIENCE</p>
+        </div>
 
-          {/* Stat 2 */}
-          <div style={{ textAlign: 'center', flex: 1 }}>
-            <p style={{
-              fontSize: '48px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 8px 0'
-            }}>5</p>
-            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>YEARS OF EXPERIENCE</p>
-          </div>
+        <div style={{
+          width: '2px',
+          height: '60px',
+          backgroundColor: '#4A6B5F'
+        }}></div>
 
-          {/* Divider */}
-          <div style={{
-            width: '2px',
-            height: '60px',
-            backgroundColor: '#4A6B5F'
-          }}></div>
-
-          {/* Stat 3 */}
-          <div style={{ textAlign: 'center', flex: 1 }}>
-            <p style={{
-              fontSize: '48px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 8px 0'
-            }}>1</p>
-            <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>GOAL = EXCELLENCE</p>
-          </div>
+        <div style={{ textAlign: 'center', flex: 1 }}>
+          <p style={{
+            fontSize: '48px',
+            fontWeight: 'bold',
+            color: '#4A6B5F',
+            margin: '0 0 8px 0'
+          }}>1</p>
+          <p style={{ fontSize: '14px', color: '#4A6B5F', margin: 0 }}>GOAL = EXCELLENCE</p>
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -359,7 +359,7 @@ export default function Portfolio() {
           fontSize: '28px',
           fontWeight: 'bold',
           color: '#FFFFFF',
-          marginBottom: '24px',
+          marginBottom: '12px',
           textAlign: 'center'
         }}>My Approach</h2>
 
@@ -368,99 +368,56 @@ export default function Portfolio() {
           flexDirection: 'column',
           gap: '24px'
         }}>
-          {/* Card 1 */}
-          <div style={{
-            border: '8px solid #FFFFFF',
-            borderRadius: '8px',
-            padding: '24px',
-            backgroundColor: '#FFFFFF',
-            boxShadow: 'inset 0 0 0 2px #4A6B5F'
-          }}>
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
+          {[
+            {
+              icon: 'fa-book',
+              title: 'All Subjects Welcome',
+              text: 'I believe every subject lights up a different part of a child\'s mind. That\'s why I teach across the board from Malay and English to Math and Science. True confidence grows when a student feels capable in all areas, not just one.'
+            },
+            {
+              icon: 'fa-graduation-cap',
+              title: 'Every Level Matters',
+              text: 'Whether your child is in primary school or preparing for STPM, IB, Matriculation or Diploma, they deserve full attention. I meet students exactly where they are with lessons built for their stage, not a one-size-fits-all plan.'
+            },
+            {
+              icon: 'fa-lightbulb',
+              title: 'Real Understanding Over Rote Learning',
+              text: 'My rule is simple. Learn to understand, not just to pass. Memorizing for exams fades. But when a student truly gets a concept, that stays with them for life. And that\'s the kind of learning I build.'
+            }
+          ].map((item, i) => (
+            <div key={i} style={{
+              border: '8px solid #FFFFFF',
+              borderRadius: '8px',
+              padding: '24px',
+              backgroundColor: '#FFFFFF',
+              boxShadow: 'inset 0 0 0 2px #4A6B5F'
             }}>
-              <i className="fas fa-book" style={{ fontSize: '20px' }}></i>
-              All Subjects Welcome
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              color: '#222222',
-              margin: 0
-            }}>
-              I believe every subject lights up a different part of a child's mind. That's why I teach across the board from Malay and English to Math and Science. True confidence grows when a student feels capable in all areas, not just one.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div style={{
-            border: '8px solid #FFFFFF',
-            borderRadius: '8px',
-            padding: '24px',
-            backgroundColor: '#FFFFFF',
-            boxShadow: 'inset 0 0 0 2px #4A6B5F'
-          }}>
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}>
-              <i className="fas fa-graduation-cap" style={{ fontSize: '20px' }}></i>
-              Every Level Matters
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              color: '#222222',
-              margin: 0
-            }}>
-              Whether your child is in primary school or preparing for STPM, IB, Matriculation or Diploma, they deserve full attention. I meet students exactly where they are with lessons built for their stage, not a one-size-fits-all plan.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div style={{
-            border: '8px solid #FFFFFF',
-            borderRadius: '8px',
-            padding: '24px',
-            backgroundColor: '#FFFFFF',
-            boxShadow: 'inset 0 0 0 2px #4A6B5F'
-          }}>
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}>
-              <i className="fas fa-lightbulb" style={{ fontSize: '20px' }}></i>
-              Real Understanding Over Rote Learning
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              color: '#222222',
-              margin: 0
-            }}>
-              My rule is simple. Learn to understand, not just to pass. Memorizing for exams fades. But when a student truly gets a concept, that stays with them for life. And that's the kind of learning I build.
-            </p>
-          </div>
+              <h3 style={{
+                fontSize: '18px',
+                fontWeight: 'bold',
+                color: '#4A6B5F',
+                margin: '0 0 12px 0',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px'
+              }}>
+                <i className={`fas ${item.icon}`} style={{ fontSize: '20px' }}></i>
+                {item.title}
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                lineHeight: '1.8',
+                color: '#222222',
+                margin: 0
+              }}>
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -488,96 +445,55 @@ export default function Portfolio() {
           flexDirection: 'column',
           gap: '24px'
         }}>
-          {/* Card 1 */}
-          <div style={{
-            border: '2px solid #4A6B5F',
-            borderRadius: '8px',
-            padding: '24px',
-            backgroundColor: '#FFFFFF'
-          }}>
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
+          {[
+            {
+              icon: 'fa-hand-fist',
+              title: 'Learning by Doing',
+              text: 'Students don\'t just listen — they solve, draw, explain, and try. Because you remember what you use, not what you hear.'
+            },
+            {
+              icon: 'fa-heart',
+              title: 'Mistakes Are Welcome',
+              text: 'Wrong answers are part of learning. I make sure every student feels safe to ask, guess, and grow without fear.'
+            },
+            {
+              icon: 'fa-globe',
+              title: 'Lessons That Connect to Life',
+              text: 'Why does algebra matter? How is science in your phone? I link every topic to real life so it makes sense and sticks.'
+            }
+          ].map((item, i) => (
+            <div key={i} style={{
+              border: '2px solid #4A6B5F',
+              borderRadius: '8px',
+              padding: '24px',
+              backgroundColor: '#FFFFFF'
             }}>
-              <i className="fas fa-hand-fist" style={{ fontSize: '20px' }}></i>
-              Learning by Doing
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              color: '#222222',
-              margin: 0
-            }}>
-              Students don't just listen — they solve, draw, explain, and try. Because you remember what you use, not what you hear.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div style={{
-            border: '2px solid #4A6B5F',
-            borderRadius: '8px',
-            padding: '24px',
-            backgroundColor: '#FFFFFF'
-          }}>
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}>
-              <i className="fas fa-heart" style={{ fontSize: '20px' }}></i>
-              Mistakes Are Welcome
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              color: '#222222',
-              margin: 0
-            }}>
-              Wrong answers are part of learning. I make sure every student feels safe to ask, guess, and grow without fear.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div style={{
-            border: '2px solid #4A6B5F',
-            borderRadius: '8px',
-            padding: '24px',
-            backgroundColor: '#FFFFFF'
-          }}>
-            <h3 style={{
-              fontSize: '18px',
-              fontWeight: 'bold',
-              color: '#4A6B5F',
-              margin: '0 0 12px 0',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px'
-            }}>
-              <i className="fas fa-globe" style={{ fontSize: '20px' }}></i>
-              Lessons That Connect to Life
-            </h3>
-            <p style={{
-              fontSize: '16px',
-              lineHeight: '1.8',
-              color: '#222222',
-              margin: 0
-            }}>
-              Why does algebra matter? How is science in your phone? I link every topic to real life so it makes sense and sticks.
-            </p>
-          </div>
+              <h3 style={{
+                fontSize: '18px',
+                fontWeight: 'bold',
+                color: '#4A6B5F',
+                margin: '0 0 12px 0',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '10px'
+              }}>
+                <i className={`fas ${item.icon}`} style={{ fontSize: '20px' }}></i>
+                {item.title}
+              </h3>
+              <p style={{
+                fontSize: '16px',
+                lineHeight: '1.8',
+                color: '#222222',
+                margin: 0
+              }}>
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -642,7 +558,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -670,7 +586,6 @@ export default function Portfolio() {
           flexDirection: 'column',
           gap: '24px'
         }}>
-          {/* Subjects Box */}
           <div style={{
             border: '2px solid #4A6B5F',
             borderRadius: '8px',
@@ -697,7 +612,6 @@ export default function Portfolio() {
             </p>
           </div>
 
-          {/* Levels Box */}
           <div style={{
             border: '2px solid #4A6B5F',
             borderRadius: '8px',
@@ -727,7 +641,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -750,29 +664,35 @@ export default function Portfolio() {
           textAlign: 'center'
         }}>What I Offer</h2>
 
-        {/* Carousel Container - with scroll snap for proper dot navigation */}
-        <div style={{
-          display: 'flex',
-          overflowX: 'auto',
-          gap: '20px',
-          paddingBottom: '20px',
-          scrollBehavior: 'smooth',
-          WebkitOverflowScrolling: 'touch',
-          scrollSnapType: 'x mandatory'
-        }}>
+        <div
+          ref={carouselRef}
+          className="carousel-container"
+          style={{
+            display: 'flex',
+            overflowX: 'auto',
+            gap: '20px',
+            paddingBottom: '20px',
+            marginBottom: '12px',
+            scrollBehavior: 'smooth',
+            WebkitOverflowScrolling: 'touch'
+          }}
+        >
           {packages.map((pkg, index) => (
-            <div key={index} style={{
-              flex: '0 0 calc(100% - 32px)',
-              maxWidth: '280px',
-              aspectRatio: '4 / 5',
-              border: '2px solid #4A6B5F',
-              borderRadius: '8px',
-              padding: '16px',
-              backgroundColor: '#f9f9f9',
-              display: 'flex',
-              flexDirection: 'column',
-              scrollSnapAlign: 'start'
-            }}>
+            <div
+              key={index}
+              data-package-item
+              style={{
+                flex: '0 0 calc(100% - 32px)',
+                maxWidth: '280px',
+                border: '2px solid #4A6B5F',
+                borderRadius: '8px',
+                padding: '16px',
+                backgroundColor: '#f9f9f9',
+                display: 'flex',
+                flexDirection: 'column',
+                scrollSnapAlign: 'start'
+              }}
+            >
               <h3 style={{
                 fontSize: '18px',
                 fontWeight: 'bold',
@@ -819,20 +739,19 @@ export default function Portfolio() {
         <div style={{
           display: 'flex',
           justifyContent: 'center',
-          gap: '8px',
-          marginTop: '12px'
+          gap: '8px'
         }}>
           {packages.map((_, index) => (
             <button
               key={index}
-              onClick={() => setActiveCarouselIndex(index)}
+              onClick={() => scrollToPackage(index)}
               style={{
                 width: '10px',
                 height: '10px',
                 borderRadius: '50%',
                 border: 'none',
                 cursor: 'pointer',
-                backgroundColor: index === activeCarouselIndex ? '#4A6B5F' : '#e0e0e0',
+                backgroundColor: index === activePackage ? '#4A6B5F' : '#e0e0e0',
                 transition: 'background-color 0.3s'
               }}
               aria-label={`Go to package ${index + 1}`}
@@ -841,7 +760,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
@@ -872,7 +791,6 @@ export default function Portfolio() {
           gap: '24px',
           alignItems: 'start'
         }}>
-          {/* Image */}
           <img
             src="/ainacta.webp"
             alt="Teacher Aina"
@@ -884,7 +802,6 @@ export default function Portfolio() {
             }}
           />
 
-          {/* Text & CTA */}
           <div style={{
             display: 'flex',
             flexDirection: 'column',
@@ -919,7 +836,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Premium divider line */}
+      {/* Divider */}
       <div style={{
         height: '1px',
         backgroundColor: '#4A6B5F',
